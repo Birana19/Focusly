@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/onboardingFragment1">
+
+    <fragment
+        android:id="@+id/onboardingFragment1"
+        android:name="com.example.studytracker.OnboardingFragment1"
+        android:label="Onboard1">
+        <action
+            android:id="@+id/action_onboard1_to_onboard2"
+            app:destination="@id/onboardingFragment2"/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/onboardingFragment2"
+        android:name="com.example.studytracker.OnboardingFragment2"
+        android:label="Onboard2">
+        <action
+            android:id="@+id/action_onboard2_to_onboard3"
+            app:destination="@id/onboardingFragment3"/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/onboardingFragment3"
+        android:name="com.example.studytracker.OnboardingFragment3"
+        android:label="Onboard3">
+        <action
+            android:id="@+id/action_onboard3_to_home"
+            app:destination="@id/home"/>
+    </fragment>
+
+    <!-- Add Home fragment -->
+    <fragment
+        android:id="@+id/home"
+        android:name="com.example.studytracker.HomeActivity"
+        android:label="Home"/>
+</navigation>
